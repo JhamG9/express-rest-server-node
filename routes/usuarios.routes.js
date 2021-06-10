@@ -6,7 +6,7 @@ const router = Router();
 
 router.get('/', usuariosGet);
 router.post('/', usuariosPost);
-router.put('/', usuariosPut );
+router.put('/:id', usuariosPut );
 router.patch('/', usuariosPatch);
 router.delete('/', usuariosDelete);
 
