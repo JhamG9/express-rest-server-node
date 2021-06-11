@@ -8,9 +8,6 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.usuariosPath = '/api/usuarios';
-        
-        // Conectar a la base de datos
-        this.connectDb();
 
         // Middlewares
         this.middlewares();
@@ -44,8 +41,5 @@ class Server {
         });
     }
 }
-
-
-
 
 module.exports = Server;
