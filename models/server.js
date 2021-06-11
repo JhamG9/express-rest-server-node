@@ -8,10 +8,6 @@ class Server {
         this.port = process.env.PORT;
         this.usuariosPath = '/api/usuarios';
 
-        // CORS
-
-        this.app.use(cors())
-
         // Middlewares
         this.middlewares();
 
@@ -23,6 +19,9 @@ class Server {
     }
 
     middlewares(){
+        // CORS
+        this.app.use(cors());
+        
         // Directorio publico   
         this.app.use(express.static('public'));
     }
@@ -37,8 +36,5 @@ class Server {
         });
     }
 }
-
-
-
 
 module.exports = Server;
